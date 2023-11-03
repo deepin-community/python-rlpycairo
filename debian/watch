@@ -1,0 +1,10 @@
+version=4
+
+# GitHub has most up-to-date files but no version tags... not finalized?
+#opts="filenamemangle=s%(?:.*?)?v?(@ANY_VERSION@@ARCHIVE_EXT@)%@PACKAGE@-$1%" \
+#    https://github.com/MrBitBucket/rlPyCairo-mirror/tags \
+#    (?:.*?/)v?@ANY_VERSION@@ARCHIVE_EXT@
+
+# PyPI has older published versions
+https://pypi.debian.net/rlPyCairo/rlPyCairo-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+
