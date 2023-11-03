@@ -1,15 +1,46 @@
-Source: template-repository
-Section: unknown
+Source: python-rlpycairo
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Georges Khaznadar <georgesk@debian.org>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ python3-all,
+ python3-setuptools,
+Standards-Version: 4.6.2
+Homepage: https://www.reportlab.com/
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-rlpycairo
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-rlpycairo.git
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-rlpycairo
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3,
+ python3-freetype,
+Description: plugin for the ReportLab PDF Toolkit.
+ This is a plugin for the ReportLab PDF Toolkit.
+ which constructs rich PDF documents, and also creation
+ of charts in a variety of bitmap and vector formats.
+ .
+ This plugin is intended to replace most of the usage of the
+ libart based C extension _renderPM which has been shown to
+ have issues when rendering complex documents.
+ .
+ This backend can be brought into use by setting 
+ reportlab.rl_config.renderPMBackend = 'rlPyCairo'
+ any of the methods detailed in reportlab/rl_config.py
+ can be used to accomplish this.
+ .
+ The new backend seems able to handle all the same behaviour as
+ _renderPM and the only place where it seems inferior is in the
+ rendering of scaled images and the speed with which it draws
+ text.
+ .
+ At present the rlPyCairo backend only uses the _renderPM extension 
+ to use its mapping of ReportLab font names to extract paths for
+ rendering this is no doubt the reason for its slowness when
+ rendering text.
+

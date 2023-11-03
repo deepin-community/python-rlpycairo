@@ -1,5 +1,17 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-rlpycairo (0.3.0-3) unstable; urgency=medium
 
-  * Initial release
+  * fixed Vcs-Git in debian/control
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Georges Khaznadar <georgesk@debian.org>  Sat, 30 Sep 2023 14:43:36 +0200
+
+python-rlpycairo (0.3.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Georges Khaznadar <georgesk@debian.org>  Tue, 11 Jul 2023 15:50:49 +0200
+
+python-rlpycairo (0.3.0-1) experimental; urgency=medium
+
+  * Initial release. (Closes: #1039935)
+
+ -- Georges Khaznadar <georgesk@debian.org>  Thu, 29 Jun 2023 16:08:12 +0200
